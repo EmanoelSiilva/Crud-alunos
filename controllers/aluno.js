@@ -14,6 +14,19 @@ exports.delete = (req, res, next) => { //Deleta um aluno
     }).catch(next)
 }
 
+exports.update = (req, res, next) => {
+    PI.findByIdAndUpdate({ _id: req.params.id }, req.body).then(() => {
+        PI.findOne({ _id: req.params.id }).then((pi) => {
+            res.send(pi)
+        }).catch(next)
+    })
+}
+
+exports.read = (req, res, next) => {
+    PI.find({ }).then((pi) => {
+        res.send(pi)
+    })
+}
 exports.teste = (req, res) => {res.send('Teste no controller aluno')}
 
 
