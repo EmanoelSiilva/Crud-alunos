@@ -14,7 +14,7 @@ const DB = new Schema({ //Criando a tabela, que posteriomente chamarei de aluno
   },
   status: {
     type: Boolean,
-    default: false
+    default: true
   },
   email: {
     type: String

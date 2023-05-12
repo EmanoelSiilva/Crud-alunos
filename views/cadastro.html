@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastramento e atualização de dados</title>
+    <link rel="stylesheet" href="../public/css/cadastro.css">
+</head>
+<body>
+    <div class="box-formulario">
+        <div class="formulario">
+            <div class="box-title">
+                <h1 class="title">Cadastro do aluno</h1>
+            </div>
+
+            <form action="/api/interest" method="post">
+                <span>
+                    <input type="text" class="input-hidden" id="nome" name="nome" placeholder="Nome" autocomplete="off" required=""/>
+                    <label for="nome"><i class="icon icon-user-outline"></i></label>
+                </span>
+
+                <span>
+                    <input type="text" class="input-hidden" id="dataNasc" name="dataNasc" placeholder="Data de nascimento" autocomplete="off" required=""/>
+                    <label for="data"><i class="icon icon-user-outline"></i></label>
+                </span>
+
+                <span>
+                    <input type="text" class="input-hidden" id="matricula" name="matricula" placeholder="Matrícula" autocomplete="off" required=""/>
+                    <label for="matricula"><i class="icon icon-user-outline"></i></label>
+                </span>
+
+                <span>
+                    <input type="text" class="input-hidden" id="email" name="email" placeholder="E-mail" autocomplete="off" required=""/>
+                    <label for="email"><i class="icon ico-mail-3"></i></label>
+                </span>
+
+                <div class="box-btn">
+                    <input type="submit" value="Enviar" class="btn-submit">
+                    <input type="submit" value="Cancelar" class="btn-submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

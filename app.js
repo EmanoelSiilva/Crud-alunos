@@ -3,11 +3,14 @@ const app = express()
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const api = require('./router/api')
+const path = require('path')
 
 app.get('/', (req, res) => res.send('Salve mundão!'))
 app.use(bodyParser.json())
 
 app.use('/api', api)
+app.use(bodyParser.urlencoded({ extended:true }))
+app.use(express.static("public"))
 
 app.use((err, req, res) => {
     console.log(err)
