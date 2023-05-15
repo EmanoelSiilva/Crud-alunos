@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const DB = new Schema({ //Criando a tabela, que posteriomente chamarei de aluno
   nome: {
     type: String,
-    required: [true, "Campo obrigatório!"]
+    // required: [true, "Campo obrigatório!"]
   },
   dataNasc: {
     type: String
