@@ -26,8 +26,26 @@
                 row.insertCell(2).innerHTML = item.matricula;
                 row.insertCell(3).innerHTML = item.email;
                 row.insertCell(4).innerHTML = item.status;
+
+                const cell = row.insertCell();
+                const  button = document.createElement('button');
+                button.textContent = 'Deletar';
+                button.addEventListener('click', () => {
+                    deleteItem(item._id)
+                })
+                cell.appendChild(button)
             })
         })
+
+        const deleteItem = (id) => {
+           fetch('http://localhost:3000/api/interest/' + id, {
+            method: 'DELETE'
+           }).then(res => {
+            if(res.ok) {
+                console.log('OK')
+            } else {console.log('NAO OK')}
+           })
+        }
     </script>
 </body>
 </html>
