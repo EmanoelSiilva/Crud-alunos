@@ -28,12 +28,18 @@
                 row.insertCell(4).innerHTML = item.status;
 
                 const cell = row.insertCell();
-                const  button = document.createElement('button');
-                button.textContent = 'Deletar';
-                button.addEventListener('click', () => {
+                const  button1 = document.createElement('button');
+                const  button2 = document.createElement('button');
+                button1.textContent = 'Deletar';
+                button2.textContent = 'Atualizar'
+                button1.addEventListener('click', () => {
                     deleteItem(item._id)
                 })
-                cell.appendChild(button)
+                button2.addEventListener('click', () => {
+                    atualizaItem(item._id)
+                })
+                cell.appendChild(button1)
+                cell.appendChild(button2)
             })
         })
 
@@ -46,6 +52,11 @@
             } else {console.log('NAO OK')}
            })
         }
+
+        const atualizaItem = () => {
+            window.location.href = 'http://localhost:3000/api/teste/'
+        }
+
     </script>
 </body>
 </html>
