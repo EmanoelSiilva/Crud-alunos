@@ -4,18 +4,21 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const api = require('./router/api')
 const path = require('path')
+const cors = require('cors')
 
 app.get('/', (req, res) => res.send('Salve mundão!'))
 app.use(bodyParser.json())
 
 app.use('/api', api)
-app.use(bodyParser.urlencoded({ extended:true }))
-app.use(express.static("public"))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended:true }));
+app.use(express.static('public'))
+app.use(cors())
 
-app.use((err, req, res) => {
-    console.log(err)
-    res.status(422).send({err: err.message})
-})
+// app.use((err, req, res) => {
+//     console.log(err)
+//     res.send('Erro')
+// })
 
 
 mongoose.connect('mongodb+srv://manu:123@cluster0.jre9vc3.mongodb.net/?retryWrites=true&w=majority')

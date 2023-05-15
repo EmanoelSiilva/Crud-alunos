@@ -29,8 +29,13 @@ exports.read = (req, res, next) => {
         res.send(pi)
     })
 }
+
 exports.teste = (req, res) => {
     res.sendFile(path.join(__dirname, '../views/cadastro.html'))
+}
+
+exports.teste2 = (req, res) => {
+    res.sendFile(path.join(__dirname, "../views/aluno.html"))
 }
 
 
