@@ -5,7 +5,7 @@ exports.create = (req, res, next) => { //Cria um novo aluno
     // cria novo ‘pi’ na BD a partir do request, depois, devolve o
     //‘pi’ criado ao cliente
     PI.create(req.body).then(function(pi){
-        res.send(pi);
+        res.redirect('http://localhost:3000/api/aluno')
         console.log(req.body);
     }).catch(next)
 };
