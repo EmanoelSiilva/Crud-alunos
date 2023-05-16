@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lista de Alunos</title>
+    <link rel="stylesheet" href="/css/tableAluno.css">
 </head>
 <body>
+    <div class="box-title">
+        <h1 class="title">Lista de Alunos</h1>
+    </div>
     <table id="myTable">
         <tr>
             <th>Nome</th>
@@ -48,7 +52,7 @@
             method: 'DELETE'
            }).then(res => {
             if(res.ok) {
-                console.log('OK')
+                window.location.href = "http://localhost:3000/api/aluno/"
             } else {console.log('NAO OK')}
            })
         }

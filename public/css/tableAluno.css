@@ -1,0 +1,98 @@
+    body {
+        background-color: #bad5be;
+    }
+
+    .box-title .title {
+   
+        position: relative; 
+        text-align:center; 
+        font-size:35px; 
+        text-transform:uppercase; 
+        color:#358941; 
+        letter-spacing:1px;
+        font-family:'open_sansregular'; 
+      
+      }
+      
+      .box-title .title .subtitle {
+        
+        margin-top: 5px;
+        font-size:15px; 
+        color:#4c4c4c; 
+        word-spacing:1px; 
+        font-weight:bold; 
+        letter-spacing: 7px;
+        text-transform: uppercase; 
+        font-family:'open_sansregular'; 
+        font-weight:500;
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        grid-template-rows: 27px 0;
+        grid-gap: 20px;
+        align-items: center;
+      
+      }
+      
+      .box-title .title .subtitle:after,.box-title .title .subtitle:before {
+      
+        content: " ";
+        display: block;
+        border-bottom: 1px solid #7aa680;
+        border-top: 1px solid #7aa680;
+        height: 6px;
+        background-color: transparent;
+      
+      }
+
+    #myTable {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    /* Estilo para as células do cabeçalho */
+    #myTable th {
+        background-color: #f2f2f2;
+        text-align: left;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Estilo para as células das linhas de dados */
+    #myTable td {
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Estilo para as células das linhas ímpares */
+    #myTable tr:nth-child(odd) {
+        background-color: #f9f9f9;
+    }
+
+    /* Estilo para as células quando o mouse está em cima */
+    #myTable tr:hover {
+        background-color: #e6e6e6;
+    }
+
+    button {
+  
+        color: #fff;
+        background: #43a351;
+        cursor: pointer;
+        border: none;
+        border-radius: 50px;
+        transition: 0.5s;
+        width: 100%;
+        padding: 0.5em 1em;
+        font-size: 1em;
+        font-weight: bold;
+        float: left;
+        margin: 10px;
+      
+      }
+      
+      button:hover {
+       
+        background-color:#4c4c4c;
+      
+      }
+

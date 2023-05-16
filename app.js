@@ -6,19 +6,19 @@ const api = require('./router/api')
 const path = require('path')
 const cors = require('cors')
 
-app.get('/', (req, res) => res.send('Salve mundão!'))
-app.use(bodyParser.json())
-
-app.use('/api', api)
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended:true }));
-app.use(express.static('public'))
+app.use('/api', api)
+app.use(express.static("public"))
 app.use(cors())
 
 // app.use((err, req, res) => {
 //     console.log(err)
 //     res.send('Erro')
 // })
+app.get('/', (req, res)  => {
+    res.sendFile(path.join(__dirname, './views/cadastro.html'))
+})
 
 
 mongoose.connect('mongodb+srv://manu:123@cluster0.jre9vc3.mongodb.net/?retryWrites=true&w=majority')

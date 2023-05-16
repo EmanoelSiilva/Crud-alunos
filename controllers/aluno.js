@@ -4,9 +4,9 @@ const path = require('path')
 exports.create = (req, res, next) => { //Cria um novo aluno 
     // cria novo ‘pi’ na BD a partir do request, depois, devolve o
     //‘pi’ criado ao cliente
-    console.log(req.body);
     PI.create(req.body).then(function(pi){
         res.send(pi);
+        console.log(req.body);
     }).catch(next)
 };
 
