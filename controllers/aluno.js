@@ -2,8 +2,6 @@ const PI = require('../models/model')
 const path = require('path')
 
 exports.create = (req, res, next) => { //Cria um novo aluno 
-    // cria novo ‘pi’ na BD a partir do request, depois, devolve o
-    //‘pi’ criado ao cliente
     PI.create(req.body).then(function(pi){
         res.redirect('http://localhost:3000/api/aluno')
         console.log(req.body);
@@ -30,11 +28,7 @@ exports.read = (req, res, next) => {
     })
 }
 
-exports.teste = (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/cadastro.html'))
-}
-
-exports.teste2 = (req, res) => {
+exports.listaAlunos = (req, res) => {
     res.sendFile(path.join(__dirname, "../views/aluno.html"))
 }
 
